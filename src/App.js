@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+// const App = () =>{
+  
+//   console.log("Hello from component");
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+//   const now = new Date();
+//   const a = 10
+//   const b = 20 
+
+
+
+//   return (
+//   <div>
+//     <p>Hello World, it is {now.toString()}</p>
+//     <p>{a} plus {b} is {a+b}</p>
+//   </div>
+// )
+// }
+
+const Hello = (props) =>{
+  return(
+    <div>
+      <p>Hello {props.name}, you are {props.age} years old</p>
     </div>
-  );
+  )
 }
 
+const App = () =>{
+
+  const name = "Peter";
+  const age =  30;
+  
+  return(
+    <>
+        <h1>Greattings</h1>
+    <Hello name="Jose" age="22" />
+    <Hello name="John" age={33 + 22}/>
+    <Hello name={name} age={age} />
+    <Hello />
+
+
+    </>
+
+  )
+}
 export default App;
